@@ -1,0 +1,464 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+/* Common CSS */
+
+:root {
+    --font-h1: 2.5em;
+    --font-p: 1em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 1000px;
+}
+
+/* ------------
+Header start 
+-------------*/
+header {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    border-radius: 15px;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.header-left {
+    width: 50%;
+    padding: 1em 0 0 4em;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: var(--font-h1);
+}
+
+p {
+    font-size: var(--font-p);
+    margin-bottom: 30px;
+}
+
+.header-left a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 20px;
+    border: 2px solid #DD0000;
+    border-radius: 5px;
+    transition: 1s all ease-in-out;
+    overflow: hidden;
+    position: absolute;
+    z-index: 5;
+}
+
+.header-left a::before {
+    content: "";
+    background-color: #DD0000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    position: absolute;
+    transition: all .6s ease;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+}
+
+.header-left a:hover::before {
+    height: 380%;
+}
+
+.fa-angle-right {
+    padding-left: 10px;
+}
+
+.header-right {
+    width: 50%;
+}
+
+.header-right img {
+    width: 100%;
+}
+
+/* ------------
+Header end 
+-------------*/
+
+/* ------------
+Main start 
+-------------*/
+main {
+    display: flex;
+    margin-top: 60px;
+}
+
+.nav-menu {
+    min-width: 200px;
+    height: 210px;
+    background-color: black;
+    border-radius: 5px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    width: 140px;
+    background-color: #ffff;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu .active {
+    background-color: #DD0000;
+}
+
+.nav-menu .active a {
+    color: #ffff;
+}
+
+.content {
+    width: 100%;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.team {
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f3f3f3;
+}
+
+.team-photo {
+    width: 100%;
+    height: 50%;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 150px;
+}
+
+.team-details {
+    width: 100%;
+    height: 180px;
+    padding: 15px;
+}
+
+.team-details a {
+    text-decoration: none;
+    color: black;
+    padding: 4px 8px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.team-details p {
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+.fa-clock {
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.fa-message {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+/* ------------
+Main end 
+-------------*/
+
+.view-all {
+    padding: 8px 20px;
+    background-color: #DD0000;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 100px;
+    text-align: center;
+    display: none;
+}
+
+.view-all a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ------------
+Footer start 
+-------------*/
+
+footer {
+    background-color: black;
+    text-align: center;
+}
+
+footer h1 {
+    color: white;
+    font-size: var(--font-h1);
+    padding-top: 60px;
+}
+
+hr {
+    border: 1px solid #ffff;
+    opacity: .1;
+    width: 90%;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.fa-facebook {
+    color: white;
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.fa-twitter {
+    color: white;
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.fa-instagram-square {
+    color: white;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+/* ------------
+Footer end 
+-------------*/
+
+/* ------------
+Upcoming matches start 
+-------------*/
+
+.matches-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.match-info {
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f3f3f3;
+}
+
+.teams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 80px;
+}
+
+.teams h4 {
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.both-teams {
+    width: 45%;
+}
+
+.both-teams img {
+    width: 100%;
+}
+
+.match-details {
+    height: 100px;
+    padding: 20px;
+    padding-top: 0;
+    text-align: center;
+}
+
+/* ------------
+Upcoming matches end 
+-------------*/
+
+/* ------------
+Responsive for tab start 
+-------------*/
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .nav-menu {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-menu ul li {
+        border: 1px solid #f3f3f3;
+        width: 260px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .team-photo img {
+        height: 200px;
+    }
+
+    .team-details {
+        height: 180px;
+    }
+
+    .view-all {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .belgium,
+    .netherland,
+    .england {
+        display: none;
+    }
+}
+
+/* ------------
+Responsive for tab end 
+-------------*/
+
+/* ------------
+Responsive for mobile start 
+-------------*/
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    header {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header-left {
+        width: 100%;
+        text-align: center;
+        padding-right: 4em;
+    }
+
+    .header-right {
+        width: 100%;
+    }
+
+    .header-right img {
+        width: 100%;
+        min-width: 300px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .nav-menu {
+        background-color: white;
+        margin: 0 auto;
+    }
+
+    .nav-menu ul {
+        width: 100%;
+    }
+
+    .nav-menu ul li {
+        border: 1px solid #f3f3f3;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .team-photo img {
+        height: 250px;
+    }
+
+    .team-details {
+        height: 200px;
+        padding-top: 25px;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+
+    footer li {
+        margin-bottom: 15px;
+    }
+}
